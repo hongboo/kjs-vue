@@ -1,0 +1,18 @@
+module.exports = {
+  '/ws': {
+    ws: true,
+    target: "ws://39.96.165.180:8081"
+    // target: "ws://localhost:8081"
+  },
+  '/': {
+    ws: false,
+    target: 'http://39.96.165.180:8081',
+    // target: 'http://localhost:8081',
+    changeOrigin: true,
+    pathRewrite: {
+      '^/': ''
+    }
+  }
+
+
+}
